@@ -34,7 +34,7 @@ WizKids is an interactive IQ quiz platform designed to challenge and enhance cog
    ```
 3. Start the application:
    ```bash
-   npm start
+   node wizkids.js
    ```
 4. Open your browser and navigate to:
    ```markdown
