@@ -1,0 +1,6 @@
+{
+    "watch": ["model", "views", "public"],
+    "ext": "js ejs",
+    "ignore": ["uploads", "node_modules"]
+  }
+  

@@ -1,0 +1,129 @@
+.login-page-background {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    background: url("https://res.cloudinary.com/dzbfawwzr/image/upload/v1704343002/loginbackground_bwi3ss.jpg");
+    background-repeat: no-repeat;
+    background-position: center;
+    background-attachment: fixed;
+    background-size: cover;
+}
+.login-page-container{
+    width: 500px;
+    color: aliceblue;
+    background: color #295b6c;;
+    padding: 30px 40px;
+}
+.login-page-container h1{
+    font-size: 30px;
+    text-align: center;
+    color: #fff;
+    margin-top: 90px;
+}
+.login-user1 {
+    width: 100%;
+    height: 30px;
+    margin-top: 50px;
+}
+.login-user1 input{
+    width: 100%;
+    height: 100%;
+    background: transparent;
+    color:#fff;
+    border: none;
+    outline: none;
+    border: 2px solid rgba(255,255,255,.2);
+    border-radius: 40px;
+    padding: 20px 45px 20px 20px;
+    font-size: 900;
+    font-weight: bold;
+}
+.login-user1 input::placeholder{
+    color: #fff;
+}
+.login-user1 i{
+    position: absolute;
+    right: 20px;
+    margin-right: 33%;
+    margin-top: 13px;
+}
+.login-user{
+    width: 100%;
+    height: 30px;
+    margin: 30px 0;
+    margin-top: 40px;
+}
+.login-user input{
+    width: 100%;
+    height: 100%;
+    background: transparent;
+    color:#fff;
+    border: none;
+    outline: none;
+    border: 2px solid rgba(255,255,255,.2);
+    border-radius: 40px;
+    padding: 20px 45px 20px 20px;
+    font-size: 900;
+    font-weight: bold;
+}
+.login-user input::placeholder{
+    color: #fff;
+}
+.login-user i{
+    position: absolute;
+    right: 20px;
+    margin-right: 33%;
+    margin-top: 13px;
+}
+.login-rememberme{
+    display: flex;
+    justify-content: space-between;
+    font-size: 20px;
+    margin: 18px;
+    text-decoration: none;
+}
+.login-rememberme a{
+    text-decoration: none;
+    color:coral
+}
+.login-page-container button{
+    width: 85%;
+    height:70%;
+    font-style:italic;
+    font-weight: 900;
+    border: none;
+    outline: none;
+    border: 2px solid rgba(255,255,255,.2);
+    border-radius: 40px;
+    margin-bottom: 10px;
+    margin-left: 5%;
+}
+.login-page-container button::submit{
+    background-color: blue;
+}
+.login-register-link{
+    display:contents;
+    padding: 10px;
+    text-align: center;
+    color: #fff;
+    font-size: medium;
+    font-weight: 600;
+    justify-content:space-between;
+    margin: 5px;
+
+}
+.login-register-link a{
+    text-decoration: none;
+    color: coral;
+}
+
+
+
+.error-message {
+    color: #dc3545;
+    font-family: "Roboto";
+    font-size: 17px;
+    font-weight: bold;
+    margin-left: 20px;
+  }

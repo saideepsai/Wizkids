@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="login.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans&display=swap" rel="stylesheet">
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous"/>
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js" integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js" integrity="sha384-B4gt1jrGC7Jh4AgTPSdUtOBvfO8shuf57BaghqFfPlYxofvL8/KUEfYiJOMMV+rV" crossorigin="anonymous"></script>
+    <script src="https://kit.fontawesome.com/661356f07e.js" crossorigin="anonymous"></script>
+    <link rel="icon" href="https://res.cloudinary.com/dzbfawwzr/image/upload/v1706043288/WizKids_logo_pqafvm.png">
+
+
+    
+</head>
+<body>
+
+    
+
+    <form action="/login" method="post">
+        <div id="sectionLoginpage">
+            <div class="login-page-background">
+              <div class="login-page-container">
+                  <form action="">
+                      <h1>LOGIN</h1>
+                      <div class="login-user1">
+                          <input id="name" name="username" type="text" placeholder="USERNAME"
+                          required>
+                          <i class='bx bx-user' ></i>
+                          <p id="nameErrMsg" class="error-message"></p>
+                      </div>
+                      <div class="login-user">
+                          <input id="passwordInput" name="password" type="password" placeholder="PASSWORD" 
+                          required>
+                          <i class='bx bxs-lock-alt show-password-icon' onclick="togglePasswordVisibility()"></i>
+                          <p id="passwordErrMsg" class="error-message"></p>
+                      </div>
+
+                      <p id="invalidDetails" class="error-message text-center"></p>
+      
+                      <div class="login-rememberme mt-2">
+                          <label><input type="checkbox">REMEMBER ME</label>
+                      </div>
+                      <button type="submit" class="submit">LOGIN</button>
+                      <div class="login-register-link">
+                          <p>NEW USER? <a href="/signup">REGISTER ACCOUNT</a></p>
+      
+                      </div>
+                  </form>
+              </div>
+          </div>
+        </div>
+    </form>
+
+
+
+    <script>
+        function togglePasswordVisibility() {
+            const passwordInput = document.getElementById("passwordInput");
+            const icon = document.querySelector('.show-password-icon');
+    
+            if (passwordInput.type === "password") {
+                passwordInput.type = "text";
+                icon.classList.remove('bxs-lock-alt');
+                icon.classList.add('bxs-lock-open-alt');
+            } else {
+                passwordInput.type = "password";
+                icon.classList.remove('bxs-lock-open-alt');
+                icon.classList.add('bxs-lock-alt');
+            }
+        }
+
+        let nameEl = document.getElementById("name");
+        let passwordInputEl = document.getElementById("passwordInput");
+        let nameErrMsgEl = document.getElementById("nameErrMsg");
+        let passwordErrMsgEl = document.getElementById("passwordErrMsg");
+        
+
+        nameEl.addEventListener("blur", function(event) {
+        if (event.target.value === "") {
+            nameErrMsgEl.textContent = "Required*";
+        } else {
+            nameErrMsgEl.textContent = "";
+        }
+        });
+
+        passwordInputEl.addEventListener("blur", function(event) {
+        if (event.target.value === "") {
+            passwordErrMsgEl.textContent = "Required*";
+        } else {
+            passwordErrMsgEl.textContent = "";
+        }
+        });
+        
+    </script>
+    <!-- Include this script at the top of your login page -->
+    <script>
+        // Parse URL query parameters to check for error
+        const params = new URLSearchParams(window.location.search);
+        const error = params.get('error');
+    
+        // If error parameter is present and equals 'invalid', display error message
+        if (error === 'invalid') {
+        invalidDetails.textContent = 'Invalid credentials';
+        }
+    </script>
+  
+
+</body>
+</html>

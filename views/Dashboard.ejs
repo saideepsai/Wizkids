@@ -1,0 +1,334 @@
+<!DOCTYPE html><html class="menu">
+<html>
+
+<head>
+
+<meta charset="utf-8"/>
+<meta http-equiv="X-UA-Compatible" content=="IE=edge"/>
+<meta name="google" value="notranslate"/>
+<title>Dashboard</title>
+
+<link rel="stylesheet" type="text/css" href="Dashboard.css">
+<link rel="stylesheet" type="text/css" href="https://netdna.bootstrapcdn.com/font-awesome/4.0.3/css/font-awesome.css" rel="stylesheet">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Open+Sans&display=swap" rel="stylesheet">
+<link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous"/>
+<script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js" integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN" crossorigin="anonymous"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js" integrity="sha384-B4gt1jrGC7Jh4AgTPSdUtOBvfO8shuf57BaghqFfPlYxofvL8/KUEfYiJOMMV+rV" crossorigin="anonymous"></script>
+<script src="https://kit.fontawesome.com/661356f07e.js" crossorigin="anonymous"></script>
+<link rel="icon" href="https://res.cloudinary.com/dzbfawwzr/image/upload/v1706043288/WizKids_logo_pqafvm.png">
+
+<style>
+  .right-column {
+    width: calc(100% - 100px); /* Adjust the width based on the main-menu width */
+    float: left;
+    box-sizing: border-box;
+    padding: 20px;
+    transition: margin-left 0.2s; /* Added transition for margin-left */
+    margin-left: 90px; /* Initially move it off-screen to the left */
+  }
+
+  .main-menu:hover ~ .right-column {
+    margin-left: 250; /* Adjust the value based on the width of your main-menu */
+  }
+</style>
+
+
+
+  
+ 
+
+
+
+</head>
+<body>
+    <form action="/Dashboard" method="post">
+    </form>
+
+    
+    
+
+    <div class="">
+      <h1 class="wizkids-heading margin" > WIZKIDS </h1>
+        <div class="main-container">
+            <nav class="main-menu">
+                <div>
+                   <img class="logo" src="https://res.cloudinary.com/dzbfawwzr/image/upload/v1706040096/WizKids_logo-removebg-preview_r8hkrh.png"/>
+                </div> 
+               <div class="settings"></div>
+               <div class="scrollbar" id="style-1">
+
+                <h1 class="nav-text"> </h1>
+                     
+               <ul>
+                 
+               <li>                                   
+                    <a href="#">
+                    <i class="fa fa-home fa-lg"></i>
+                    <span class="nav-text">Dashboard</span>
+                    </a>
+               </li> 
+
+
+               <li id="profile-link">                                 
+                <a href="#">
+                <i class="fa fa-user fa-lg"></i>
+                <span class="nav-text">Profile</span>
+                </a>
+               </li> 
+               
+               <div class="profile-details">
+                  <!-- Add an if statement to check if the user object exists -->
+                    <div class="profile-details d-flex flex-column">
+                      <!-- Assuming user.avatar.data is the base64-encoded image data -->
+                      <img class="profile_photo" src="data:<%= user.avatar.contentType %>;base64,<%= user.avatar.data.toString('base64') %>" alt="User Avatar">
+                      <h1 class="user-name"> <%= user.Fullname %> </h1>
+                      <!-- Add a logout link in the navigation menu -->
+                      <li>
+                          <button onclick="logout()" class="">
+                            <span class="logout"> <i class="fa-solid fa-right-from-bracket"></i> Logout</span>
+                          </button>                          
+                      </li>
+
+
+                    </div>
+
+                
+               </div>
+               
+               <li>                                   
+                    <a href="/Basicquiz">
+                    <i class="fa fa-solid fa-b"></i>
+                    <span class="nav-text">Basic</span>
+                    </a>
+               </li> 
+
+
+
+               <li>                                   
+                    <a href="/Mediumquiz">
+                    <i class="fa fa-solid fa-m"></i>
+                    <span class="nav-text">Medium</span>
+                    </a>
+                </li> 
+
+
+                <li>                                   
+                    <a href="/Advancequiz">
+                    <i class="fa fa-solid fa-a"></i>
+                    <span class="nav-text">Advance</span>
+                    </a>
+                </li> 
+
+                 
+               
+               
+                
+               <li>
+               <a>
+                    <i class="fa fa-heart-o fa-lg"></i>
+                                            
+                    <span class="share"> 
+                    
+                    
+                    <div class="addthis_default_style addthis_32x32_style">
+                        
+                    <div style="position:absolute;
+                    margin-left: 56px;top:3px;"> 
+                        
+                        
+                    
+                        
+                        <a href="https://www.facebook.com/" target="_blank" class="share-popup"><img src="http://icons.iconarchive.com/icons/danleech/simple/512/facebook-icon.png" width="30px" height="30px"></a>
+                    
+                        <a href="https://www.twitter.com/" target="_blank" class="share-popup"><img src="https://cdn1.iconfinder.com/data/icons/metro-ui-dock-icon-set--icons-by-dakirby/512/Twitter_alt.png" width="30px" height="30px"></a>
+                    
+                        
+                    
+                    
+                        
+                        
+                        
+                    </div>
+                    <script type="text/javascript">var addthis_config = {"data_track_addressbar":true};</script>
+                    <script type="text/javascript" src="//s7.addthis.com/js/300/addthis_widget.js#pubid=ra-4ff17589278d8b3a"></script>
+                                            
+                                                
+                                                    
+                                                
+                                                
+                    </span>
+
+
+                        
+                    <span class="fb-like">  
+                    <iframe src="//www.facebook.com/plugins/like.php?href=http%3A%2F%2Ffacebook.com%2Fstartific&amp;width&amp;layout=button&amp;action=like&amp;show_faces=false&amp;share=false&amp;height=35" scrolling="no" frameborder="0" style="border:none; overflow:hidden; height:35px;" allowTransparency="true"></iframe>
+                                            
+                    </span>
+
+                    <span class="nav-text">
+                    </span>
+                                       
+                </a>
+               
+               </li>
+                                           
+               
+                 
+                 
+               
+                
+                 
+               
+                 
+               <li>
+                                                  
+               <a href="#" data-toggle="modal" data-target="#helpModal">
+               <i class="fa fa-question-circle fa-lg"></i>
+               <span class="nav-text">Help</span>
+               </a>
+               </li>   
+                   
+               </ul>
+               </div> 
+               </nav>
+        </div>
+        
+        
+        
+        <div class="right-column pt-0">
+            
+            <div>
+              <div class="">
+                <h1 class="why-choose-us"> Why Choose Wizkids </h1>
+              </div>
+
+              
+              <div class="pt-3">
+                <p class="description-size">
+                  <a class="sub-heading"> 🧠 Diverse Question Categories:  </a> </br>
+                  Explore a spectrum of cognitive skills with our diverse range of question categories.</br>
+                  From logical reasoning and mathematical prowess to spatial awareness and verbal acuity,</br> 
+                  there's something to challenge every facet of your intellect.
+                </p>
+              </div>
+              <div>
+                <p class="description-size">
+                  <a class="sub-heading"> 🕐 Timed Challenges: </br> </a>
+                  Feel the thrill of racing against the clock! Our timed challenges add an exciting </br>
+                  dimension to your quiz experience, putting your ability to think quickly and decisively </br>
+                  to the test.
+                </p>
+              </div>
+              <div>
+                <p class="description-size">
+                  <a class="sub-heading"> 🌐 Culturally Neutral Assessments: </br> </a>
+                  We believe in fairness and inclusivity. Our quizzes are designed to be culturally neutral, </br>
+                  ensuring that individuals from all backgrounds can showcase their intelligence without </br>
+                  any cultural biases.
+                </p>
+              </div>
+              <div>
+                <p class="description-size">
+                  <a class="sub-heading"> 🏆 Personalized Feedback: </br> </a>
+                  Receive detailed feedback on your performance, complete with explanations for each </br>
+                  question. Understand your strengths and areas for improvement, empowering you to </br>
+                  enhance your cognitive skills with every quiz attempt. </br>
+                </p>
+              </div>
+              
+              <div class="pt-4">
+                <p class="description-size">
+                  Ready to unlock the secrets of your intelligence? Take the plunge into the world of </br>
+                  WIZKIDS and elevate your thinking to new heights. Begin your IQ quiz </br>
+                  adventure now!
+                </p>
+              </div>
+        
+        
+            </div>  
+        </div>
+    </div>
+
+
+    <div class="modal fade" id="helpModal" tabindex="-1" role="dialog" aria-labelledby="helpModalLabel" aria-hidden="true">
+      <div class="modal-dialog" role="document">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h5 class="modal-title" id="helpModalLabel">Help</h5>
+            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+              <span aria-hidden="true">&times;</span>
+            </button>
+          </div>
+          <div class="modal-body">
+            <p>please mail your quires to Wizkidslearning@gmail.com</p>
+          </div>
+          <div class="modal-footer">
+            <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+          </div>
+        </div>
+      </div>
+    </div>
+
+
+
+        
+  
+    
+			
+  
+<script>
+  // Function to toggle profile details
+  function toggleProfileDetails() {
+    $(".profile-details").toggle();
+  }
+
+  // Click event for the profile link
+  $("#profile-link").click(function (e) {
+    e.preventDefault();
+    toggleProfileDetails();
+  });
+
+  // Hover event for the main menu
+  $(".main-menu").hover(
+    function () {
+      $(".right-column").css("transition", "margin-left 0.2s");
+      $(".right-column").css("margin-left", "250px");
+    },
+    function () {
+      $(".right-column").css("margin-left", "90px");
+    }
+  );
+
+  // Function to handle logout
+  function logout() {
+    // Send a POST request to the logout route
+    fetch('/logout', {
+      method: 'POST',
+    })
+      .then(response => {
+        if (response.ok) {
+          // Redirect to the Wizkids page after successful logout
+          window.location.href = '/';
+        } else {
+          console.error('Logout failed');
+        }
+      })
+      .catch(error => {
+        console.error('Logout failed:', error);
+      });
+  }
+</script>
+
+
+    
+    
+    
+</body>
+</html>
+
+
+

@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <link rel="stylesheet" href="signup.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans&display=swap" rel="stylesheet">
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous"/>
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js" integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js" integrity="sha384-B4gt1jrGC7Jh4AgTPSdUtOBvfO8shuf57BaghqFfPlYxofvL8/KUEfYiJOMMV+rV" crossorigin="anonymous"></script>
+    <script src="https://kit.fontawesome.com/661356f07e.js" crossorigin="anonymous"></script>
+    <link rel="icon" href="https://res.cloudinary.com/dzbfawwzr/image/upload/v1706043288/WizKids_logo_pqafvm.png">
+</head>
+
+<body>
+
+    <form action="/signup" method="post" enctype="multipart/form-data">
+        <div id="sectionSignuppage">
+            <div class="signup-page-background">
+              <div class="d-flex justify-content-center">
+                  <div class="signup-box">
+                      <h1 class="signup-page-heading">Sign Up</h1>
+                          <form class="signup-page-form">
+                              <label class="signup-page-label">Full Name</label>
+                              <input id="Fullname" name="Fullname" class="signup-page-input form-control" type="text" pattern="[A-Za-z]+" title="Only letters are allowed" placeholder="" required>
+                              <label class="signup-page-label">User Name</label>
+                              <input id="username" name="username" class="signup-page-input form-control" type="text" placeholder="" required>
+                              <label class="signup-page-label">Age</label>
+                              <input id="Age" name="Age" class="signup-page-input form-control" type="number" name="age" required>
+                              <label class="signup-page-label">Gender</label>
+                              <div class="d-flex flex-row">
+                                  <div class="d-flex flex-row">
+                                      <div>
+                                          <input id="Gender" name="Gender" class="radio-inline" type="radio" id="male" value="Male">
+                                      </div>
+                                      <div>
+                                          <label for="male" class="pl-1">Male</label>
+                                      </div>
+                                  </div>
+                                  <div class="d-flex flex-row pl-3">
+                                      <div>
+                                          <input id="Gender" name="Gender" class="radio-inline" type="radio" id="female" value="Female">
+                                      </div>
+                                      <div>
+                                          <label for="female" class="pl-1">Female</label>
+                                      </div>
+                                  </div>
+                              </div>
+                              <label class="signup-page-label">Date of birth</label>
+                              <input id="Date_of_birth" name="Date_of_birth" class="signup-page-input form-control" type="date" name="dob" min="2000-12-31">
+                              <label class="signup-page-label">Mobile Number</label>
+                              <input id="Mobile_Number" name="Mobile_Number" class="js-text-full text-full form-text required signup-page-input form-control" data-drupal-selector="edit-field-user-mobile-0-value" type="text" id="edit-field-user-mobile-0-value" name="field_user_mobile[0][value]" value="" size="60" maxlength="10" placeholder="Enter mobile number" required="required" aria-required="true">
+                              <label class="signup-page-label">Password</label>
+                              <input id="password" name="password" class="signup-page-input form-control" type="password"  placeholder="Password" maxlength="10" required>
+                              <label class="signup-page-label"> Confirm Password</label>
+                              <input id="Confirm_Password" name="Confirm_Password" class="signup-page-input form-control" type="password" name="password" placeholder=" Confirm Password" required>
+                              <label class="signup-page-label">Profile Photo</label>
+                              <input id="avatar" name="avatar" class="signup-page-input" type="file" accept="image/*" required>
+                              <button id="submitBtn" class="signup-page-submit-button mt-3" type="submit">submit</button>
+                          </form>
+                          <p class="signup-page-toc">By clicking the Sign Up button you agree to our <br>
+                          <a href="#" id="termsModalTrigger">Terms and Conditions</a> and <a href="#">Policy and Privacy</a>
+                          </p>
+                  </div>
+              </div>
+              <div class="pb-5">
+                  <p class="signup-page-bottom pb-3">Already have an account <a href="/login">Login here</a> </p>
+              </div>
+          </div>
+          </div>
+
+    </form>
+
+
+    <div class="modal fade" id="termsModal" tabindex="-1" aria-labelledby="termsModalLabel" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered">
+          <div class="modal-content">
+            <div class="modal-header">
+              <h5 class="modal-title" id="termsModalLabel">Terms and Conditions</h5>
+              <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                <span aria-hidden="true">&times;</span>
+              </button>
+            </div>
+            <div class="modal-body">
+              <!-- Insert your terms and conditions content here -->
+              <p>
+                Eligibility: Users must be of legal age or have parental consent to participate in quizzes on the website.<br>
+    
+                User Conduct: Users must agree to behave respectfully and refrain from any abusive, harassing, or offensive behavior while using the website.<br>
+    
+                Accuracy of Information: Users are responsible for providing accurate and up-to-date information when participating in quizzes or creating accounts on the website.<br>
+    
+                Fair Use: Users must agree to participate in quizzes fairly and refrain from cheating or using any unfair advantage to gain higher scores.<br>
+    
+                Disclaimer of Liability: The website is not responsible for any damages or losses incurred as a result of using the website or participating in quizzes. Users use the website at their own risk.<br>
+              </p>
+            </div>
+            <div class="modal-footer">
+              <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+            </div>
+          </div>
+        </div>
+      </div>
+      
+      <script>
+        // Add this script to trigger the modal popup
+        $(document).ready(function() {
+          $('#termsModalTrigger').click(function() {
+            $('#termsModal').modal('show');
+          });
+        });
+      </script>
+
+
+
+    <script>
+        // Get the current date in the format YYYY-MM-DD
+        function getCurrentDate() {
+            const now = new Date();
+            const year = now.getFullYear();
+            const month = (now.getMonth() + 1).toString().padStart(2, '0');
+            const day = now.getDate().toString().padStart(2, '0');
+            return `${year}-${month}-${day}`;
+        }
+    
+        // Set the max attribute of the date input to the current date
+        document.getElementById("Date_of_birth").max = getCurrentDate();
+    </script>
+    
+    
+    
+    
+
+</body>
+
+</html>
+
+
